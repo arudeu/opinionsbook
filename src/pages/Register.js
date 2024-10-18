@@ -14,7 +14,7 @@ export default function Register() {
   function register(e) {
     e.preventDefault();
 
-    fetch("http://localhost:4000/users/register", {
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/users/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

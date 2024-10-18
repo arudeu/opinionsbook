@@ -8,7 +8,7 @@ import OpinionsCard from "../components/OpinionsCard";
 export default function Home() {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/blogs")
+    fetch(`${process.env.REACT_APP_API_BASE_URL}/blogs`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
